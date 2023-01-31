@@ -11,14 +11,14 @@ function App() {
   const portrait = windowHeight > windowWidth;
   const leftWidth = portrait ? windowWidth : windowWidth * 0.2;
   const leftHeight = portrait ? "auto" : windowHeight;
-  const rightWidth = portrait ? windowWidth: windowWidth * 0.8;
+  const rightWidth = portrait ? windowWidth : windowWidth * 0.8;
   const height = windowHeight;
   return (
     <StoreProvider>
       <div
         style={{
           height,
-          overflow: portrait ? "scroll" : "hidden",
+          overflow: "scroll",
         }}
       >
         <header
@@ -37,9 +37,11 @@ function App() {
             }),
           }}
         >
-          <h1 style={{
-            fontSize: 22,
-          }}>
+          <h1
+            style={{
+              fontSize: 22,
+            }}
+          >
             Auburn Career Center {portrait ? <br /> : "-"} SkillsUSA - Review
           </h1>
         </header>
@@ -63,6 +65,7 @@ function App() {
               flex: 1,
               width: rightWidth,
               float: portrait ? "none" : "right",
+              backgroundColor: "#FFFFFF"
             }}
             className="App-body-right"
           >

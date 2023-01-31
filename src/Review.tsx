@@ -1,6 +1,5 @@
 import React from "react";
 import { useContestants, useReviews, useSubmission } from "./StoreContext";
-import useWindowDimensions from "./useWindowDimensions";
 
 const ReviewPanel = () => {
   const { reviews } = useReviews();
@@ -15,7 +14,7 @@ const ReviewPanel = () => {
             {selectedReviews.map((review) => (
                 <div key={review.id}>
                     <h3>{review.name}</h3>
-                    <p>{review.review}</p>
+                    <div dangerouslySetInnerHTML={{ __html: review.review }} />
                 </div>
             ))}
         </div>
@@ -33,10 +32,10 @@ const styles = {
         backgroundColor: 'lightblue',
         border: '1px solid black',
         borderRadius: 5,
-        overflow: 'auto',
         flexGrow: 1,
-        height: '50%',
+        height: '40%',
         margin: 10,
+        overflow: 'scroll',
     },
     reviews: {
         display: 'flex',
@@ -44,6 +43,7 @@ const styles = {
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
         marginLeft: 20,
+        overflow: 'scroll',
     },
 };
 
