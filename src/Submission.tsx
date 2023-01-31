@@ -41,7 +41,7 @@ const Submsission = () => {
       <iframe
         ref={iframe}
         style={{ float: portrait ? "none" : "left", margin: portrait ? "auto" : 20 }}
-        src={selected.url}
+        src={selected.url.replace("http://", "//")}
         width={width}
         height={height * 0.5}
         title="submission"
