@@ -128,10 +128,10 @@ export const initialState = {
       id: 5,
       for: 5,
       name: "Michael Simoneau (@enigma-ceo)",
-      rating: 94,
+      rating: 97,
       review: `
         <h3>Review</h1>
-        <p>Generally, the code is well written and structured. Out of the submissions, it is the most reusable and scalable. The code is not overly redundant, but could be improved. The code comments are sparse, and not overly helpful. The code is properly and consistently spaced & tabbed. Would have preferred to see JavaScript, but the result is clean and the links are nice.</p>
+        <p>Generally, the code is well written and structured. Out of the submissions, it is the most reusable and scalable. The code is not overly redundant, but could be improved. The code comments are sparse, and not overly helpful. The code is properly and consistently spaced & tabbed. Good choice of technology (NodeJS), and the result is clean and the links are nice. Only gripe is that the results are logged as opposed to printed to the display.</p>
         <h4>Functionality</h4><aside>Does it work?</aside>
         <p>Yes, it works.</p>
         <h4>Code Quality</h4><aside>Is the code well written?</aside>
