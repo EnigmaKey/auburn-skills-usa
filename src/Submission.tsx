@@ -45,7 +45,6 @@ const Submsission = () => {
         }
       }
     }
-    console.log("loading", loading, iframe.current, iframeSrc.current);
   }, [iframe, loading]);
 
   const portrait = height > width;
