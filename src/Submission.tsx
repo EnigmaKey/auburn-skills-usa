@@ -27,7 +27,8 @@ const Submsission = () => {
       console.error(e);
       setLoading(false);
       if (iframeSrc.current) {
-        iframeSrc.current.value = " There was an error loading the submission. ";
+        iframeSrc.current.value =
+          " There was an error loading the submission. ";
         setViewSource(true);
       }
     }
@@ -38,8 +39,8 @@ const Submsission = () => {
       if (iframe.current && iframeSrc.current) {
         try {
           iframeSrc.current.value =
-            (iframe.current.contentWindow?.document.body.parentNode as any)?.outerHTML ||
-            "Error...";
+            (iframe.current.contentWindow?.document.body.parentNode as any)
+              ?.outerHTML || "Error...";
         } catch (e) {
           iframeSrc.current.value = "Error...";
         }
@@ -52,7 +53,12 @@ const Submsission = () => {
   return (
     <div>
       <pre
-        style={{ overflow: "scroll", marginLeft: 20, fontSize: 18, scrollbarWidth: "none" }}
+        style={{
+          overflow: "scroll",
+          marginLeft: 20,
+          fontSize: 18,
+          scrollbarWidth: "none",
+        }}
       >{`${selected.name} - ${selected.url}`}</pre>
       {/* <button onClick={() => setViewSource(!viewSource)}>
         View {viewSource ? "Result" : "Source"}
@@ -78,7 +84,11 @@ const Submsission = () => {
           width: portrait ? "100%" : width * 0.8 - 40,
           display: viewSource ? "none" : "block",
         }}
-        src={selected.url.replace("http://", "//")}
+        src={
+          window.location.protocol.includes("https")
+            ? selected.url.replace("http://", "https://")
+            : selected.url
+        }
         width={"100%"}
         height={height * 0.5}
         title="submission"
