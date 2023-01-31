@@ -6,6 +6,24 @@ body {
   background-color: #EEEEEE;
 }
 
+aside {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 20px;
+  padding-top: 2rem;
+  padding-bottom: 0.2rem;
+  width: 400px;
+  position: relative;
+  top: -3.3rem;
+  left: -15px;
+  opacity: 0.33;
+  margin-bottom: -3.3rem;
+  margin-top: 1rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .rotate {
     animation: rotate infinite 20s linear;
