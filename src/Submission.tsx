@@ -21,7 +21,16 @@ const Submsission = () => {
         }
       }
     }
-    load();
+    try {
+      load();
+    } catch (e) {
+      console.error(e);
+      setLoading(false);
+      if (iframeSrc.current) {
+        iframeSrc.current.value = " There was an error loading the submission. ";
+        setViewSource(true);
+      }
+    }
   }, [selected.url]);
 
   useEffect(() => {
